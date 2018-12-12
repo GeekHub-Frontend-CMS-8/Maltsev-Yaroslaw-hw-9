@@ -1,0 +1,101 @@
+﻿.header
+  @extend %flex-center
+h1
+  padding: 15px
+  text-align: center
+  color: $light-color
+  font-family: $secondary-font
+  font-size: 36px
+  font-weight: $bold-weight
+
+.header
+  padding-bottom: 200px
+  +flex-flow(row wrap)
+  &_logo
+    padding: 0
+    @extend %flex-center
+  &_menu
+    width: 60%
+    +flex-justify-align-flow(flex-end, center, row nowrap)
+    &-text
+      color: $light-color
+      font-family: $secondary-font
+      text-transform: uppercase
+
+.menu-burger_checkbox
+  display: none
+  &:checked 
+    + .menu-button
+      span:before
+        transform: rotate(-35deg)
+        width: 10px
+        transform-origin: left bottom
+      span:after
+        transform: rotate(35deg)
+        width: 10px
+        transform-origin: left top
+    + .menu_list
+      display: block
+      border: solid blue
+.menu-button
+  display: block
+  width: 30px
+  height: 30px
+  background-color: transparent
+  position: relative
+  span
+    position: absolute
+    margin-top: -1px
+    margin-left: -10px
+    top: 50%
+    left: 50%
+    width: 20px
+    height: 2px
+    background-color: $light-color
+  span::before
+    position: absolute
+    margin-top: -1px
+    margin-left: -10px
+    top: 50%
+    left: 50%
+    width: 20px
+    height: 2px
+    background-color: $light-color
+    content: ''
+    display: block
+    transition: 0.2s
+    transform: translateY(-5px)
+  span::after
+    position: absolute
+    margin-top: -1px
+    margin-left: -10px
+    top: 50%
+    left: 50%
+    width: 20px
+    height: 2px
+    background-color: $light-color
+    content: ''
+    display: block
+    transition: 0.2s
+    transform: translateY(5px)
+.menu
+  &_list
+    display: none
+    +flex-justify-align-flow(space-around, center, column nowrap)
+    @media screen and (min-width: 600px)
+      +flex-justify-align-flow(space-around, center, row wrap)
+    &-element
+      padding: 5px
+
+.main-page
+  padding-top: 5px
+  padding-bottom: 110px
+  background: url('../img/background/main-page.png') no-repeat
+  background-size: cover
+  &_container
+    +flex-justify-align-flow(center, center, column)
+  &_subtitle
+    padding: 15px
+    padding-bottom: 30px
+    color: $light-color
+    font-size: 18px

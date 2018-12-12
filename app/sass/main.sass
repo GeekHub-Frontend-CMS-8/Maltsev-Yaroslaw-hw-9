@@ -1,0 +1,70 @@
+@import 'base/_fonts.sass'
+@import 'utils/_mixins.sass'
+@import 'utils/_variabels.sass'
+@import 'utils/_global.sass'
+.logo-text
+  color: $light-color
+  font-family: Airbag
+  font-size: 40px
+  text-transform: uppercase
+.title
+  padding-bottom: 15px
+  text-align: center
+  color: #29323c
+  font-weight: $bold-weight
+  font-size: $title-font-size
+  text-transform: uppercase
+.subtitle
+  text-align: center
+  opacity: 0.8
+  color: #29323c
+.hr
+  &::after
+    content: ''
+    display: block
+    height: 2px
+    width: 40px
+    margin: 15px auto 60px auto
+    opacity: 0.8
+    background-color: #29323c
+
+.button
+  padding: 10px 25px
+  border: 1px solid $light-color
+  border-radius: 50px
+  background: transparent
+  transition: 0.3s
+  &:hover
+    background: #485563
+    border: 1px solid #485563
+  &-container
+    @extend %flex-center
+  &-text
+    color: $light-color
+    font-family: $secondary-font
+    font-weight: $bold-weight
+    text-transform: uppercase
+  &-bottom
+    display: block
+    margin-top: 155px
+    padding: 19px 15px
+    border-radius: 50%
+    &_arrow-img
+      padding: 6px 10px
+      background: url('../img/Icon.png') no-repeat
+.list
+  max-width: 100%
+  +flex-justify-align-flow(space-around, center, row wrap)
+.label
+  font-family: $secondary-font
+  font-size: $main-font-size-small
+  color: $light-color
+@import 'components/_main-page.sass'
+@import 'components/_services.sass'
+@import 'components/_works.sass'
+@import 'components/_clients.sass'
+@import 'components/_team.sass'
+@import 'components/_logos.sass'
+@import 'components/_pricing.sass'
+@import 'components/_form-page.sass'
+@import 'components/_footer.sass'

@@ -1,0 +1,41 @@
+﻿.form-page
+  max-width: 100%
+  @each $background in form, map
+    &_#{$background}-container
+      background-image: url('../img/background/#{$background}.png')  
+  +flex-flow(row wrap)
+  
+  &_map-container
+    width: 100%  
+    @media screen and (min-width: 700px)
+      width: 50%    
+  &_map-img
+    padding: 50% 0
+    @media screen and (min-width: 700px)
+      padding: 376px 0
+
+  &_form-container
+    +flex-justify-align-flow(center, center, column nowrap)    
+    padding: 110px 0
+    width: 100%  
+    @media screen and (min-width: 700px)
+      width: 50%
+  &_form
+    text-align: right
+    padding: 10px
+    width: 80%
+    +flex-justify-align-flow(center, center, column nowrap) 
+  &_input
+    margin-bottom: 25px
+    padding: 10px 5px
+    width: 70%
+  &_textarea
+    width: 72%
+  &_button
+    border-radius: 0px
+    &-container
+      margin-top: 25px
+      +flex-justify(flex-end)
+.input-container
+  +flex-justify(space-between)
+  width: 90%

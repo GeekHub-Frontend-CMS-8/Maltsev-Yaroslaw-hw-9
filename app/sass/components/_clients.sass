@@ -1,0 +1,42 @@
+﻿.carousel
+  margin-bottom: 100px
+  &_inf-container
+    margin-top: 30px
+    margin-bottom: 30px
+    height: 50%
+    +flex-justify-align-flow(center, center, column nowrap)
+  &_text
+    width: 80%
+    font-size: $main-font-size-small
+    @media screen and (min-width: 700px)
+      font-size: $main-font-size
+    &-container
+      @extend %flex-center
+  &_person
+    &-name
+      color: #29323c
+      font-weight: $bold-weight
+    &-img
+      font-family: $secondary-font
+      margin-bottom: 10px
+      padding: 30px
+    &-specialty
+      font-family: $secondary-font
+      color: #29323c
+      font-size: $main-font-size-small
+  @each $portret in nganu
+    .#{$portret}-portret
+      background-image: url('../img/clients/#{$portret}.png')
+.circle-list
+  @extend %flex-center
+  &_element
+    margin-right: 5px
+    padding: 7px
+    border: 1px solid #2b3746
+    border-radius: 50%
+    background: transparent
+    &:last-child
+      margin-right: 0
+    &:hover
+      transition: 0.2s
+      background: #2b3746

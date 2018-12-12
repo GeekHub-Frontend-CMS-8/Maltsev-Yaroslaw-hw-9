@@ -1,0 +1,41 @@
+﻿.footer
+  padding: 25px 0
+  &_container
+    +flex-flow(row wrap)
+  &_text-container
+    +flex-justify-align-flow(flex-start, center, row nowrap)
+    width: 100%
+    @media screen and (min-width: 650px)
+      margin-top: 10px
+      width: 50%    
+  &_logo
+    margin-right: 25px
+    &-text
+      color: #29323c
+  &_social-button-container
+    +flex-justify-align-flow(flex-start, center, row nowrap)
+    width: 100%
+    @media screen and (min-width: 650px)
+      +flex-justify-align-flow(flex-end, center, row nowrap)
+      margin-top: 10px
+      width: 50%
+  &_list
+    margin-left: 20px
+    padding: 5px
+    width: 30%
+    +flex-justify-align-flow(space-around, center, row nowrap)
+  &_button
+    @extend %flex-center
+    display: block
+    border-radius: 50%
+    @each $img in facebook, twitter, gp, dribble
+      &-#{$img}
+        padding: 12px
+        background-image: url('../img/footer/#{$img}.png')
+  &_stay
+    color: #29323c
+    font-size: $main-font-size-small
+.copyright
+  color: #29323c
+  font-size: $main-font-size-small  
+

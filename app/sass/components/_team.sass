@@ -1,0 +1,59 @@
+﻿.team
+  background: url('../img/background/team.png') no-repeat
+  background-size: cover
+  padding-bottom: 100px
+  &_title
+    color: $light-color
+  &_subtitle
+    color: $light-color
+  &_hr:after
+    background-color: $light-color
+  &_list
+    margin-bottom: 100px
+    &-element
+      margin-top: 20px
+      +flex-justify-align-flow(center, center, column nowrap)
+      width: 90%
+      @media screen and (min-width: $media-mobile)
+        margin-top: 20px
+        width: 40%
+      @media screen and (min-width: 700px)
+        margin-top: 0px
+        width: 22%      
+  &_img
+    padding: 50% 55%
+  @each $team-portret in slytherin, gryffindor, ravenclaw, hufflepuff
+    &_img-#{$team-portret}
+      background-image: url('../img/team/#{$team-portret}.png')
+  &_text-container
+    +flex-justify-align-flow(center, center, column)
+    width: 110%
+    padding-bottom: 30px
+    text-align: center
+    background-color: #f2f2f2
+    opacity: 0.75
+  &_person
+    &-name
+      margin-top: 30px
+      margin-bottom: 5px
+      color: #29323c
+      font-family: $secondary-font
+      font-weight: $bold-weight
+    &-specialty
+      opacity: 0.8
+      color: #29323c
+      font-family: $secondary-font
+      font-size: $main-font-size-small
+  &_social
+    &-network
+      margin-top: 20px
+      width: 70%
+      +flex-justify-align-flow(space-between, center, row nowrap)
+    &-button
+      display: block
+@each $button in dribble, email, linkedin, twitter, vvv
+  .#{$button}-button
+    padding: 13px
+    background-image: url('../img/team/social/#{$button}.png')
+.email-button
+  padding: 10px 12px

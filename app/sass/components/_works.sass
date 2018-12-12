@@ -1,0 +1,16 @@
+﻿.works
+  +flex-flow(column nowrap)
+  &_list
+    width: 100%
+    +flex-flow(row wrap)
+    &-element
+      width: 50%
+      @media screen and (min-width: 550px)
+        width: 25%
+      @media screen and (min-width: $media-tablet)
+        width: 20%     
+  &_img
+    padding: 70px calc(50% - 5px)
+  @each $img in boommy, software, dribbble_shottie, app, ss-drib, cool, food, shot, player, phone, landing-page, newhome-shot, coil-wip, boss, automaty
+    &_img-#{$img}
+      background-image: url('../img/works/#{$img}.png')

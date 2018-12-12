@@ -1,0 +1,28 @@
+*
+  margin: 0
+  +text-properties($mobile-font-size, $main-font, $main-color, $main-weight)
+  @media screen and (min-width: $media-mobile)
+    font-size: $main-font-size
+li
+  list-style: none
+.wrapper
+  max-width: 300px
+  margin: 0 auto
+  padding: 5px
+  overflow: hidden
+  @media screen and (min-width: $media-mobile)
+    max-width: 1170px  
+a
+  text-decoration: none
+.img
+  background-size: 100% 100%
+section
+  padding-top: 100px
+
+  .list
+  max-width: 100%
+  +flex-justify-align-flow(space-around, center, row wrap)
+.label
+  font-family: $secondary-font
+  font-size: $main-font-size-small
+  color: $light-color

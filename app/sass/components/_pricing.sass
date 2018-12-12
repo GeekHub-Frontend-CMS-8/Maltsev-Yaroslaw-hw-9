@@ -1,0 +1,64 @@
+﻿.pricing
+  &_list
+    +flex-justify-align-flow(center, center, row wrap)
+    max-width: 100%  
+    &-element
+      +flex-justify-align-flow(center, center, column nowrap)
+      width: 100%  
+      margin-top: 20px 
+      @media screen and (min-width: 500px)
+        margin-top: 20px
+        width: 50%
+      @media screen and (min-width: 800px)
+        margin-top: 0px
+        width: 30%       
+      &:hover
+        .pricing_main-info
+          transition: 0.3s
+          padding-bottom: 65px
+          border-top: 5px solid #485563
+  &_main-info
+    padding: 30px 0px
+    width: calc(100% - 2px)
+    +flex-justify-align-flow(center, center, column nowrap)
+    border: 1px solid #dddddd
+  &_name
+    margin-top: 30px
+    margin-bottom: 20px
+    color: #485563
+    font-family: $secondary-font
+    font-size: 20px
+    font-weight: $bold-weight
+    text-transform: uppercase
+  &_price
+    margin-bottom: 5px
+    color: #485563
+    font-family: $secondary-font
+    font-size: 45px
+    text-transform: uppercase
+  &_dauer
+    color: #29323c
+    font-size: $main-font-size-small
+    text-transform: uppercase
+  &_desc
+    padding: 35px 0px
+    width: calc(100% - 2px)
+    +flex-justify-align-flow(center, center, column nowrap)
+    border: 1px solid #dddddd
+    &-text
+      margin-bottom: 100px
+      width: 70%
+      line-height: 40px
+      color: #29323c
+      font-size: $main-font-size-small
+  &_button
+    border: 1px solid #485563
+    border-radius: 50px
+    background: #485563
+    &:hover
+      border: 1px solid #485563
+      background: transparent
+      .pricing_button-text
+        color: #485563 
+    &-text
+      font-size: $main-font-size-small
